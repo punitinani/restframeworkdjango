@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from show.views import employeeList
+
+import restfremework
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^emplist/', employeeList.as_view()),
 ]
